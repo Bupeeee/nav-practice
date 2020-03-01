@@ -1,0 +1,30 @@
+.nav_mobile {
+    height: 50px;
+    display: block;
+    background-color: white;
+    padding: 0em 2em;
+    
+    display: none;
+}
+
+.nav_logo-mobile {
+    text-decoration: none;
+    color: black;
+    line-height: 50px;
+    font-weight: bolder;
+
+    float: left;
+}
+
+.toggle_button {
+    float: right;
+    line-height: 50px;
+    background-color: white;
+    border: none;
+    font-weight: bolder;
+}
+
+.toggle_button:focus {
+    outline: none;
+    border: none;
+}
