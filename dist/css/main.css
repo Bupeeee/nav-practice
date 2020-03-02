@@ -60,17 +60,12 @@ ul ul li {
   transition: all 300ms ease-in-out;
 }
 
-ul ul li:hover {
-  background-color: #ececec;
-}
-
-ul li:hover ul {
-  transition: all 10s ease-in-out;
-  display: block;
-}
-
 .nav_desktop.active {
   transform: translateY(0vh);
+}
+
+.nav_link.active .submenu {
+  display: block;
 }
 
 .nav_mobile {
@@ -116,6 +111,7 @@ ul li:hover ul {
     width: 100%;
     z-index: -1;
     background-color: white;
+    position: static;
     float: none;
   }
   nav .nav_desktop ul li {
@@ -126,12 +122,16 @@ ul li:hover ul {
     padding: 0;
   }
   nav .nav_desktop ul ul {
-    position: static;
     background-color: #ececec;
   }
   nav .nav_desktop ul ul li a {
     font-size: 13px;
     line-height: 40px;
+  }
+}
+@media (min-width: 425px) {
+  nav ul li:hover ul {
+    display: block;
   }
 }
 

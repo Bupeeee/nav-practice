@@ -6,6 +6,12 @@ $mobile: 425px;
     }
 }
 
+@mixin tablet {
+    @media(min-width: #{$mobile}) {
+        @content;
+    }
+}
+
 @include mobile {
     nav {
         .nav_mobile {
@@ -27,6 +33,7 @@ $mobile: 425px;
                 width: 100%;
                 z-index: -1;
                 background-color: white;
+                position: static;
     
                 float: none;
 
@@ -40,7 +47,6 @@ $mobile: 425px;
                 }
 
                 ul {
-                    position: static;
                     background-color: rgb(236, 236, 236);
 
                     li {
@@ -51,6 +57,14 @@ $mobile: 425px;
                     }
                 }
             }
+        }
+    }
+}
+
+@include tablet {
+    nav {
+        ul li:hover ul {
+            display: block;
         }
     }
 }

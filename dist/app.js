@@ -10,6 +10,6 @@ navToggle.addEventListener('click', () => {
 Array.from(navLink).forEach(function(navlink){
     navlink.addEventListener('click', (e) => {
         e.preventDefault();
-
+        navlink.classList.toggle('active');
     })
 })
