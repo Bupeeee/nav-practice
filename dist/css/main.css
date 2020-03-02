@@ -130,6 +130,11 @@ ul ul li {
   }
 }
 @media (min-width: 425px) {
+  nav ul li:active ul {
+    display: block;
+  }
+}
+@media (min-width: 1050px) {
   nav ul li:hover ul {
     display: block;
   }
