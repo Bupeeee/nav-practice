@@ -25,9 +25,6 @@ $laptop: 1050px;
 
 
 
-
-
-
 @include mobile {
     nav {
         .nav_mobile {
@@ -88,6 +85,7 @@ $laptop: 1050px;
 @include laptop {
     nav {
         ul li:hover ul {
+            pointer-events: none;
             display: block;
         }
     }

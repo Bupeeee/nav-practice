@@ -7,9 +7,12 @@ navToggle.addEventListener('click', () => {
     navDesktop.classList.toggle('active')
 })
 
-Array.from(navLink).forEach(function(navlink){
-    navlink.addEventListener('click', (e) => {
-        e.preventDefault();
-        navlink.classList.toggle('active');
+var mq = window.matchMedia( "(max-width: 768px)" );
+if (mq.matches) {
+    Array.from(navLink).forEach(function(navlink){
+        navlink.addEventListener('click', (e) => {
+            e.preventDefault();
+            navlink.classList.toggle('active');
+        })
     })
-})
+}
